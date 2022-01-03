@@ -1,5 +1,6 @@
 <h1 align="center">Tools in Slide</h1> 
 
+![capa](https://user-images.githubusercontent.com/37752370/147897334-9b05e3f0-f364-40da-8b75-ac9f93824150.png)
 
 
 ![a](https://img.shields.io/static/v1?label=JavaScript&message=%20&color=yellow&style=for-the-badge&logo=)
@@ -50,7 +51,7 @@
 No terminal, clone o projeto: 
 
 ```
-git clone 
+git clone https://github.com/GuilhermeRinaldi/tools_in_slide
 ```
 ou faça o download 
 
