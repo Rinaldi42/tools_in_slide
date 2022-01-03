@@ -9,46 +9,53 @@
 	<body>
 		<div class="content">
 			<div class="slidepages">
-				<input id="p1"type="radio" name="p" checked>
-				<input id="p2"type="radio" name="p">
+				<input id="p1"type="radio" name="p" >
+				<input id="p2"type="radio" name="p" checked>
 				<input id="p3"type="radio" name="p">
 				<input id="p4"type="radio" name="p">
-				<input id="p5"type="radio" name="p">
+				<input id="p5"type="radio" name="p" >
 
 				<div class="slide s1">
 					<p>CLOCK</p>
-					<p id="">00:00</p>
+					<p id="clock">00:00:00</p>
 				</div>
 				<div class="slide s2">
 					<p>STOPWATCH</p>
-					<p id="">00:00</p>
+					<div class="stopwatch">
+						<p id="stopwatch">00:00:00</p>
+					</div>
 					<div class="buttons">
-						<button>start</button>
-						<button>stop</button>
-						<button>reset</button>
+						<button id="startStopwatch" onclick="startStopwatch()">start</button>
+						<button onclick="stop()">stop</button>
+						<button onclick="reset()">reset</button>
 					</div>
 				</div>
 				<div class="slide s3">
 					<p>HOURGLASS</p>
-					<p id="">00:00</p>
+					<div class="numbers">
+						<input id="hour"type="number" min="0" max="23"  value="0">
+						<input id="minute" type="number" min="0" max="59" value="0">
+						<input id="second" type="number" min="0" max="59" value="0">
+					</div>
+					<p id="time">00:00:00</p>
 					<div class="buttons">
 						<button>start</button>
-						<button>stop</button>
 						<button>reset</button>
 					</div>
 				</div>
 				<div class="slide s4">
 					<p>WINNER</p>
-					<p id="">00:00</p>
+					<p id="winner">1</p>
+					<div class="numbers">
+						<input id="competitors" type="number" min="1"  value="1">
+					</div>
 					<div class="buttons">
 						<button>start</button>
-						<button>stop</button>
-						<button>reset</button>
 					</div>
 				</div>
 				<div class="slide s5">
 					<p>PASSWORD</p>
-					<p id="">00:00</p>
+					<input id="password" type="text">
 					<div class="buttons">
 						<button>Generate</button>
 						<button>copy</button>
@@ -74,5 +81,6 @@
 				</label>
 			</div>
 		</div>
+		<script type="text/javascript" src="script.js"></script>
 	</body>
 </html>
