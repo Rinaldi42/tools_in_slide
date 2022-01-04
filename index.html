@@ -10,10 +10,10 @@
 		<div class="content">
 			<div class="slidepages">
 				<input id="p1"type="radio" name="p" >
-				<input id="p2"type="radio" name="p" checked>
+				<input id="p2"type="radio" name="p" >
 				<input id="p3"type="radio" name="p">
 				<input id="p4"type="radio" name="p">
-				<input id="p5"type="radio" name="p" >
+				<input id="p5"type="radio" name="p" checked>
 
 				<div class="slide s1">
 					<p>CLOCK</p>
@@ -37,7 +37,7 @@
 						<input id="minute" type="number" min="0" max="59" value="0">
 						<input id="second" type="number" min="0" max="59" value="0">
 					</div>
-					<p id="time">00:00:00</p>
+					<p id="time"></p>
 					<div class="buttons">
 						<button>start</button>
 						<button>reset</button>
@@ -45,20 +45,20 @@
 				</div>
 				<div class="slide s4">
 					<p>WINNER</p>
-					<p id="winner">1</p>
+					<p id="winner">0</p>
 					<div class="numbers">
 						<input id="competitors" type="number" min="1"  value="1">
 					</div>
 					<div class="buttons">
-						<button>start</button>
+						<button onclick="winner()" >run</button>
 					</div>
 				</div>
 				<div class="slide s5">
 					<p>PASSWORD</p>
 					<input id="password" type="text">
 					<div class="buttons">
-						<button>Generate</button>
-						<button>copy</button>
+						<button onclick="password()">Generate</button>
+						<button onclick="copy()">copy</button>
 					</div>
 				</div>
 			</div>

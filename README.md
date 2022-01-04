@@ -60,18 +60,9 @@ ou faça o download
 
 ## Tarefas em aberto
 
-1. Terminar o desing das ferramentas:
-	
-	- Ampulheta
-	- Gerador de senha 
-	- Sorteador
-
-2. Código js para as ferramentas:
-	- Relógio
+1. Código js para as ferramentas:
 	- Cronômetro
 	- Ampulheta
-	- Gerador de senha 
-	- Sorteador
 
 ## Licença 
 

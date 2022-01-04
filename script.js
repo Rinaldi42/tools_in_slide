@@ -10,8 +10,6 @@ function startStopwatch() {
 	let hour = parseInt(time.split(":")[0]);
 	let minute = parseInt(time.split(":")[1]);
 	let second = parseInt(time.split(":")[2]); 
-	let zero = ['0',''];
-	let i = 1;
 	if (startBlock) {
 		startBlock = false;
 		interval = setInterval(function() {
@@ -54,4 +52,42 @@ function reset() {
 	startBlock = true
 	document.getElementById('stopwatch').innerHTML = '00:00:00';
 
+}
+
+function winner() {
+	const competitors = document.getElementById('competitors').value;
+	const winner = Math.floor(Math.random() * (competitors - 1) + 1);
+	document.getElementById('winner').innerHTML = winner;
+}
+  
+function password() {
+	const down = "abcdefghijklmnopqrstuvwxyz";
+	const up = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	const esp = "!@()+-={}~"
+	let password = "";
+	let length = 26
+	for (var i = 0; i <= 10; i++) {
+		num = Math.floor(Math.random() * ( length - 1) + 1);
+		if (i <= 3) {
+			password += down[num];
+		}
+		if (i > 4 & i <= 6) {
+			password += up[num];
+		}
+		if (i > 6 & i <=9) {
+			length = 10;
+			if (i > 7) {
+				password += esp[num];	
+			}
+		}
+		if (i > 8 & i <=10) {
+			password += num;
+		}
+
+	}
+	document.getElementById('password').value = password;
+}
+
+function copy() {
+	navigator.clipboard.writeText(document.getElementById('password').value);
 }
