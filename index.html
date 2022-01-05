@@ -10,10 +10,10 @@
 		<div class="content">
 			<div class="slidepages">
 				<input id="p1"type="radio" name="p" >
-				<input id="p2"type="radio" name="p" >
-				<input id="p3"type="radio" name="p">
+				<input id="p2"type="radio" name="p">
+				<input id="p3"type="radio" name="p"  checked >
 				<input id="p4"type="radio" name="p">
-				<input id="p5"type="radio" name="p" checked>
+				<input id="p5"type="radio" name="p" >
 
 				<div class="slide s1">
 					<p>CLOCK</p>
@@ -25,22 +25,22 @@
 						<p id="stopwatch">00:00:00</p>
 					</div>
 					<div class="buttons">
-						<button id="startStopwatch" onclick="startStopwatch()">start</button>
-						<button onclick="stop()">stop</button>
-						<button onclick="reset()">reset</button>
+						<button id="startStopwatch" onclick="stopwatch()">start</button>
+						<button onclick="stopStopwatch()">stop</button>
+						<button onclick="resetStopwatch()">reset</button>
 					</div>
 				</div>
 				<div class="slide s3">
 					<p>HOURGLASS</p>
 					<div class="numbers">
-						<input id="hour"type="number" min="0" max="23"  value="0">
+						<input id="hour" type="number" min="0" max="23"  value="0">
 						<input id="minute" type="number" min="0" max="59" value="0">
 						<input id="second" type="number" min="0" max="59" value="0">
 					</div>
-					<p id="time"></p>
+					<p id="hourglass">00:00:00</p>
 					<div class="buttons">
-						<button>start</button>
-						<button>reset</button>
+						<button id="startStopwatch" onclick="hourglass()">start</button>
+						<button onclick="resetHourglass()">reset</button>
 					</div>
 				</div>
 				<div class="slide s4">
