@@ -8,7 +8,7 @@
 ![a](https://img.shields.io/static/v1?label=CSS3&message=%20&color=purple&style=for-the-badge&logo=)
 
 
-> Status do Projeto: 🚧👷‍ Em desenvolvimento ⚠️🚧 
+> Status do Projeto: ✔️ Concluído
 
 ### Sumário 
 
