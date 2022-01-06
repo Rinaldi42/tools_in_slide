@@ -16,17 +16,15 @@
 
 - [Funcionalidades](#funcionalidades)
 
-- [Deploy e layout](#deploy-e-layout)
+- [Deploy](#deploy)
 
-- [Arquivos](#arquivos)
-
-- [Terfas em aberto](#tarefas-em-aberto)
+- [Como rodar](#Como-rodar)
 
 
 ## Descrição do projeto 
 
 <p align="justify">
-	Um slide de páginas com ferramentas
+	Um slide fullscreen de páginas com ferramentas
 </p>
 
 ## Funcionalidades
@@ -41,12 +39,12 @@
 
 5. Gerador de senha
 
-## Deploy e layout
+## Deploy 
 
 > Link do deploy: https://guilhermerinaldi.github.io/tools_in_slide/
 
 
-## Arquivos
+## Como rodar
 
 No terminal, clone o projeto: 
 
@@ -57,12 +55,6 @@ ou faça o download
 
 ![1](https://user-images.githubusercontent.com/37752370/147860772-cde21fb0-1744-409c-9dc7-19c2f78bb974.png)
 
-
-## Tarefas em aberto
-
-1. Código js para as ferramentas:
-	- Cronômetro
-	- Ampulheta
 
 ## Licença 
 

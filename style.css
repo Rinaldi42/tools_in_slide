@@ -50,6 +50,10 @@ input:focus {
 	outline-style: none;
 }
 
+input[type="number"] {
+	width: 8vw;
+}
+
 
 button {
 	width: 20vw;
@@ -59,14 +63,11 @@ button {
 	border-radius: 5px;
 	padding: 1vh 5vw ;
 	border-style: solid;
-	font-size: 1ex;
+	font-size: 2vw;
 	transition: background-color .3s;
 }
 
-button:hover {
-	color: #FFC434;
-	background-color: white;
-}
+ 
 
 .s1 {
 	background-color: #FFE34F ;
@@ -78,9 +79,19 @@ button:hover {
 	font-size: 5ex;
 }
 
+.s2 button:hover {
+	color: #FFC434;
+	background-color: white;
+}
+
 .s3 {
 	background-color: #F99C29;
 	font-size: 5ex;
+}
+
+.s3 button:hover {
+	color: #F99C29;
+	background-color: white;
 }
 
 .s4 {
@@ -88,10 +99,21 @@ button:hover {
 	font-size: 5ex;
 }
 
+.s4 button:hover {
+	color: #EB5A1C;
+	background-color: white;
+}
+
 .s5 {
 	background-color: #47927E;
 	font-size: 5ex;
 }
+
+.s5 button:hover {
+	color: #47927E;
+	background-color: white;
+}
+
 
 #password {
 	width: 20vw;

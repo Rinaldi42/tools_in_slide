@@ -7,10 +7,6 @@ function writeTime (id, hour, minute, second) {
 	document.getElementById(id).innerHTML = hour + ':' + minute + ':' + second;
 }
 
-function write(id, value) {
-	document.getElementById(id).innerHTML = value;
-}
-
 let btnStopwatch = true;
 let btnHourglass = true;
 
@@ -47,18 +43,22 @@ function hourglass() {
 	let minute = ["0", parseInt(document.getElementById('minute').value)];
 	let second = ["0", parseInt(document.getElementById('second').value)]; 
 	let time = hour[1]*3600 + minute[1]*60 + second[1];
-	if (btnHourglass) {
+	if (btnHourglass & hour[1] + minute[1] + second[1] != 0) {
 		btnHourglass = false;
 		intervalHourglass = setInterval(function() {
 			timeleft = time - timeHourglass;
 			hour[1] = Math.floor(timeleft/3600);
 			minute[1] = Math.floor(timeleft/60) - hour[1]*60;
 			second[1] = timeleft - minute[1]*60 - hour[1]*3600;
-			hour = hour >= 10 ? ["", hour[1]] : ["0", hour[1]];
-			minute = minute >= 10 ? ["", minute[1]] : ["0", minute[1]];
+
+			hour = hour[1] >= 10 ? ["", hour[1]] : ["0", hour[1]];
+			minute = minute[1] >= 10 ? ["", minute[1]] : ["0", minute[1]];
 			second = second[1] >= 10 ? ["", second[1]] : ["0", second[1]];
 			writeTime('hourglass', hour[0]+ hour[1], minute[0] + minute[1], second[0] + second[1]);
 			timeHourglass += 1;
+			if (timeleft === 0) {
+				resetHourglass();
+			}
 		}, 1000);
 	}
 }
@@ -67,7 +67,6 @@ function stopStopwatch() {
 	clearInterval(intervalStopwatch);
 	btnStopwatch = true;
 }
-
 
 function resetStopwatch() {
 	timeStopwatch = 1;
@@ -86,7 +85,7 @@ function resetHourglass() {
 function winner() {
 	const competitors = document.getElementById('competitors').value;
 	const winner = Math.floor(Math.random() * (competitors - 1) + 1);
-	write('winner', winner);
+	document.getElementById('winner').innerHTML = winner;
 }
   
 function password() {
@@ -94,9 +93,8 @@ function password() {
 	const up = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	const esp = "!'#$%&()*+,-./:;<=>?@[]^_{}";
 	let password = "";
-	let length = 26
 	for (var i = 0; i <= 10; i++) {
-		num = Math.floor(Math.random() * ( length - 1) + 1);
+		num = Math.floor(Math.random() * ( 26 - 1) + 1);
 		if (i <= 3) {
 			password += down[num];
 		}
@@ -109,9 +107,8 @@ function password() {
 		if (i > 9 & i <=10) {
 			password += num;
 		}
-
 	}
-	write('password', password);
+	document.getElementById('password').value =  password;
 }
 
 function copy() {
